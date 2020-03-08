@@ -1,0 +1,43 @@
+{% extends "base_template.html" %}
+{% block form %}
+    <div class="row">
+{#         payment_id = models.IntegerField()#}
+{#        payment_class = models.IntegerField()#}
+{#        code = models.CharField(max_length=1000)#}
+{#        ondate = models.DateTimeField(null=True)#}
+{#        offdate = models.DateTimeField(null=True)#}
+{#        issystem = models.IntegerField()#}
+{#        basison = models.CharField(max_length=1000)#}
+{#        basisoff = models.CharField(max_length=1000)#}
+{#        longdesc = models.TextField(max_length=5000)#}
+{#        paymenttype = models.IntegerField()#}
+{#        direction = models.IntegerField()#}
+{#        paymentcode = models.IntegerField()#}
+{#        feature = models.CharField(max_length=1000)#}
+        <form id="add-payment-form" class="card col-lg-3">
+            {% csrf_token %}
+            payment_id<input type="text" name="payment_id" value="" class="payment-param form-control"><br>
+            payment_class<input type="text" name="payment_class" value="" class="payment-param form-control"><br>
+            code<input type="text" name="code" value="" class="payment-param form-control"><br>
+            ondate<input type="date" name="ondate" class="payment-param form-control"><br>
+            offdate<input type="date" name="offdate" class="payment-param form-control"><br>
+            issystem<input type="text" name="issystem" value="" class="payment-param form-control"><br>
+            basison<input type="text" name="basison" value="" class="payment-param form-control"><br>
+            basisoff<input type="text" name="basisoff" value="" class="payment-param form-control"><br>
+            longdesc<input type="text" name="longdesc" value="" class="payment-param form-control"><br>
+            paymenttype<input type="text" name="alpha2" value="" class="payment-param form-control"><br>
+            direction<input type="text" name="alpha3" value="" class="payment-param form-control"><br>
+            paymentcode<input type="text" name="en" value="" class="payment-param form-control"><br>
+            feature<input type="text" name="en" value="" class="payment-param form-control"><br>
+
+        </form>
+            <button id="add_payment_button" class="add-payment-button btn btn-dark" value="Создать">Создать</button>
+        <div class="card col-lg-8 payment-result">
+            Результаты
+        </div>
+    </div>
+
+
+<script src="/static/js/add_payment.js"></script>
+
+{% endblock form %}

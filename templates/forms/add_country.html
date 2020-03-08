@@ -1,0 +1,30 @@
+{% extends "base_template.html" %}
+{% block form %}
+    <div class="row">
+        <form id="add-country-form" class="card col-lg-3">
+            {% csrf_token %}
+            country_id<input type="text" name="country_id" value="" class="country-param form-control"><br>
+            country_class<input type="text" name="country_class" value="" class="country-param form-control"><br>
+            code<input type="text" name="code" value="" class="country-param form-control"><br>
+            name<input type="text" name="name" value="" class="country-param form-control"><br>
+            ondate<input type="date" name="ondate" class="country-param form-control"><br>
+            offdate<input type="date" name="offdate" class="country-param form-control"><br>
+            issystem<input type="text" name="issystem" value="" class="country-param form-control"><br>
+            basison<input type="text" name="basison" value="" class="country-param form-control"><br>
+            basisoff<input type="text" name="basisoff" value="" class="country-param form-control"><br>
+            short<input type="text" name="short" value="" class="country-param form-control"><br>
+            alpha2<input type="text" name="alpha2" value="" class="country-param form-control"><br>
+            alpha3<input type="text" name="alpha3" value="" class="country-param form-control"><br>
+            en<input type="text" name="en" value="" class="country-param form-control"><br>
+            updated<input type="date" name="updated" class="country-param form-control"><br>
+        </form>
+            <button id="add_country_button" class="add-country-button" value="Создать">Создать</button>
+        <div class="card col-lg-8 country-result">
+            sdfsdf
+        </div>
+    </div>
+
+
+<script src="/static/js/add_country.js"></script>
+
+{% endblock form %}
